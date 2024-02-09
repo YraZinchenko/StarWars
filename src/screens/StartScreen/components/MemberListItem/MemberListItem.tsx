@@ -3,25 +3,7 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import { Styles as styles } from './MemberListItem.styles';
 import { GenderImage } from '../../../../components';
 import FavIcon from '../../../../assets/favIcon.js';
-
-enum Genders {
-	Male = 'male',
-	Female = 'female',
-	Na = 'n/a',
-	Hermaphrodite = 'hermaphrodite',
-}
-
-export type Member = {
-	id: String;
-	gender: Genders;
-	birthYear: String;
-	name: String;
-	homeworld: Homeworld;
-};
-
-export type Homeworld = {
-	name: String;
-};
+import { Member } from '../../../../services/api/api.types';
 
 export interface MemberListItemProps {
 	data: Member;
